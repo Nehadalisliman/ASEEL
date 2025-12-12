@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>أصيل | عطور رجالية كلاسيكية</title>
-    <meta name="description" content="أصيل - علامة عطور رجالية فاخرة تجسد الأصالة والقوة." />
-    
-    <!-- Arabic Fonts: Almarai for modern UI -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              gold: {
-                400: '#D4B877',
-                500: '#C6A667',
-                600: '#A68A4E',
-              },
-              charcoal: '#3A3A3A',
-              black: '#000000',
-              matte: '#111111',
-            },
-            fontFamily: {
-              sans: ['Almarai', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
-            },
-            animation: {
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-              'slide-up': 'slideUp 0.6s ease-out forwards',
-            },
-            keyframes: {
-              fadeIn: {
-                '0%': { opacity: '0' },
-                '100%': { opacity: '1' },
-              },
-              slideUp: {
-                '0%': { transform: 'translateY(20px)', opacity: '0' },
-                '100%': { transform: 'translateY(0)', opacity: '1' },
-              }
-            }
-          },
-        },
-      }
-    </script>
-    <style>
-      body {
-        font-family: 'Almarai', sans-serif;
-        background-color: #000000;
-        color: #FFFFFF;
-        overflow-x: hidden;
-      }
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 8px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #111;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #3A3A3A;
-        border-radius: 4px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #C6A667;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "lucide-react": "https://esm.sh/lucide-react@^0.560.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.2/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^7.10.1",
-    "react/": "https://esm.sh/react@^19.2.2/",
-    "react": "https://esm.sh/react@^19.2.2"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أصيل | عطور رجالية كلاسيكية</title>
+  <meta name="description" content="أصيل - علامة عطور رجالية فاخرة تجسد الأصالة والقوة." />
+
+  <!-- Arabic Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      font-family: 'Almarai', sans-serif;
+      background-color: #000000;
+      color: #FFFFFF;
+      overflow-x: hidden;
+    }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #3A3A3A; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #C6A667; }
+  </style>
 </head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+
+<body class="bg-black text-white">
+
+  <!-- HERO SECTION -->
+  <section class="h-screen flex flex-col justify-center items-center text-center px-6 animate-fade-in">
+    <h1 class="text-4xl md:text-5xl font-bold text-gold-500 mb-4">
+      عطور أصيل الرجالية
+    </h1>
+    <p class="text-gray-300 max-w-xl text-lg mb-6">
+      تجربة فاخرة تجمع بين الأصالة والقوة… صُممت للرجل الذي يترك أثراً لا يُنسى.
+    </p>
+
+    <button class="px-8 py-3 bg-gold-500 text-black text-lg font-bold rounded-xl hover:bg-gold-600 transition">
+      اكتشف المجموعة
+    </button>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="py-20 px-6 bg-[#0c0c0c]">
+    <h2 class="text-3xl text-center font-bold text-gold-500 mb-12">مجموعة العطور</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg border border-[#222] hover:scale-105 transition">
+        <img src="https://i.imgur.com/EbQZcRL.png" class="w-full mb-4 rounded-xl" />
+        <h3 class="text-xl font-bold">أصيل الفاخر</h3>
+        <p class="text-gray-400 text-sm mt-2">مزيج شرقي - خشبي يعكس قوة الرجل.</p>
+      </div>
+
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg border border-[#222] hover:scale-105 transition">
+        <img src="https://i.imgur.com/EbQZcRL.png" class="w-full mb-4 rounded-xl" />
+        <h3 class="text-xl font-bold">العود الملكي</h3>
+        <p class="text-gray-400 text-sm mt-2">ثبات عالي ورائحة فاخرة.</p>
+      </div>
+
+      <div class="bg-[#111] p-6 rounded-2xl shadow-lg border border-[#222] hover:scale-105 transition">
+        <img src="https://i.imgur.com/EbQZcRL.png" class="w-full mb-4 rounded-xl" />
+        <h3 class="text-xl font-bold">الرجل الكلاسيكي</h3>
+        <p class="text-gray-400 text-sm mt-2">لمسة من الفانيلا والعنبر.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-10 text-center text-gray-400 bg-black">
+    جميع الحقوق محفوظة © 2025 – أصيل للعطور الرجالية
+  </footer>
+
 </body>
 </html>
